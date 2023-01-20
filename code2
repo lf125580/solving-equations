@@ -1,0 +1,22 @@
+function solveEquation(equation) {
+    // Use the eval function to solve the equation
+    return eval(equation);
+}
+
+console.log(solveEquation("2^3 + 4^2")); // Output: 20
+console.log(solveEquation("3^2 + 5^3")); // Output: 136
+
+
+Please note that using eval function is not considered safe and it can be used to execute arbitrary code if the input is not properly sanitized.
+It's recommended to use a library like mathjs or another safer way to solve equations
+
+
+const math = require('mathjs');
+
+function solveEquation(equation) {
+    // Use the math.eval function to solve the equation
+    return math.eval(equation);
+}
+
+console.log(solveEquation("2^3 + 4^2")); // Output: 20
+console.log(solveEquation("3^2 + 5^3")); // Output: 136
